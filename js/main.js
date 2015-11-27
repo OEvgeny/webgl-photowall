@@ -37289,7 +37289,7 @@
 	
 	  /* Animate position for random photos */
 	  setInterval(function () {
-	    var r = _.rand(0, xLen * yLen, 5)
+	    var r = _.rand(0, xLen * yLen, 10)
 	    r.forEach(function(index) {
 	      photos[index].pos({z:(Math.round(Math.random()) - 0.5) / 1.5}, 500).start()
 	    })
@@ -37306,7 +37306,6 @@
 	        var photo = photos[index]
 	        photo.pos({z: 1}, 500)
 	          .start()
-	          .chunk(photo.pos({z: 0}, 500).deley(100).start())
 	      }
 	  	}
 	  }, 100)
