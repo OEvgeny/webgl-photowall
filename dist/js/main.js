@@ -66,7 +66,7 @@
 	var pivot = new Three.Object3D()
 	var tween = new Tween.Tween(pivot.rotation)
 	var camera = new Three.PerspectiveCamera(45, window.innerWidth/window.innerHeight, 0.1, 1000)
-	var renderer = new Three.WebGLRenderer()
+	var renderer = new Three.WebGLRenderer({antialias: true})
 	var pointer = {x: 0, y: 0}
 	var aspect
 	var gl = renderer.context
